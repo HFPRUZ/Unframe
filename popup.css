@@ -1,0 +1,102 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2933;
+  --muted: #6b7785;
+  --card: #f3f5f8;
+  --border: #dde2e8;
+  --accent: #2563eb;
+  --accent-fg: #ffffff;
+  --ok: #16a34a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1f26;
+    --fg: #e8ebf0;
+    --muted: #98a2b3;
+    --card: #272b34;
+    --border: #3a404c;
+    --accent: #4f8cff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 380px;
+  margin: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+h1 { font-size: 16px; margin: 0; }
+
+.hint { color: var(--muted); font-size: 12px; margin: 6px 0; }
+.hint.small { font-size: 11px; text-align: center; margin-top: 10px; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  padding: 5px 10px;
+}
+button:hover { border-color: var(--accent); }
+
+.primary {
+  width: 100%;
+  padding: 11px;
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.icon-btn { font-size: 16px; padding: 2px 9px; }
+
+.link-btn { width: 100%; border: none; background: none; color: var(--accent); font-size: 12px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px;
+  margin-bottom: 8px;
+}
+
+.card.best { border-color: var(--accent); }
+
+.card-top { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; flex-wrap: wrap; }
+.host { font-weight: 600; }
+
+.badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: var(--border);
+  color: var(--muted);
+}
+.badge.video { background: var(--ok); color: #fff; }
+
+.url {
+  color: var(--muted);
+  font-size: 11px;
+  word-break: break-all;
+  max-height: 3.2em;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+
+.actions { display: flex; gap: 6px; }
+.actions button { flex: 1; padding: 5px 4px; }
+.actions .open { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+
+.status { color: var(--muted); font-size: 12px; text-align: center; margin: 4px 0 0; min-height: 1em; }
+
+[hidden] { display: none !important; }

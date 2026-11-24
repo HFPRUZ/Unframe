@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Unframe</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>▶ Unframe</h1>
+    <button id="rescan" class="icon-btn" title="Volver a buscar">⟳</button>
+  </header>
+
+  <button id="open-best" class="primary" hidden>▶ Abrir el mejor vídeo</button>
+
+  <p id="summary" class="hint"></p>
+
+  <main id="results"></main>
+
+  <button id="toggle-others" class="link-btn" hidden></button>
+  <main id="others" hidden></main>
+
+  <p class="hint small">¿Cambias de servidor en la página? Pulsa ⟳ para volver a buscar.</p>
+  <p id="status" class="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
